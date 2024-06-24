@@ -6,12 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FM</title>
-    @vite('resources/css/app.css', 'resources/js/app.js')
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="bg-lightGreen flex justify-center items-center h-full">
+<body class="bg-lig htGreen flex justify-center items-center h-full">
+    @csrf
     <main class="bg-white w-[34rem] p-8 m-9 rounded-md">
-        <form action="" class="space-y-8">
+        <a href="/success">success</a>
+        <form class="space-y-8" method="POST">
+
             <h1 class="text-3xl text-mediumGreen">Contact Us</h1>
             <div class="flex justify-between items-center">
                 <div class="flex flex-col gap-4 items-start">
@@ -35,9 +38,10 @@
                         <input type="radio" class="cursor-pointer" name="general" id="general">
                         <span>General Enquiry</span>
                     </div>
-                    <div class="border border-mediumGreen w-3/6 px-4 py-2 rounded-lg">
-                        <input type="radio" name="support" class="cursor-pointer" id="support">
-                        <span>Support Request</span>
+                    <div
+                        class="border border-mediumGreen w-3/6 px-4 py-2 rounded-lg hover:cursor-pointer hover:bg-lightGreen">
+                        <input type="radio" name="support" class="hover:bg-lightGreen cursor-pointer" id="support">
+                        < span>Support Request</>
                     </div>
                 </div>
             </div>
